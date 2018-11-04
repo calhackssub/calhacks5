@@ -1,0 +1,55 @@
+1
+00:00:0,600 --> 00:00:4,200
+feliz halloween tengo un niño en
+
+2
+00:00:4,200 --> 00:00:7,000
+casa, así que Halloween es un gran problema, pero tengo
+
+3
+00:00:7,000 --> 00:00:9,500
+También he estado leyendo un montón de dr. Seuss
+
+4
+00:00:9,500 --> 00:00:12,800
+como mucho dr. Seuss y este
+
+5
+00:00:12,800 --> 00:00:15,700
+mañana descubrí que el dr. Seuss en realidad escribió
+
+6
+00:00:15,700 --> 00:00:20,100
+un poema sobre cs61a lío relevante, así que
+
+7
+00:00:20,100 --> 00:00:24,600
+Pensé que lo compartiría con ustedes computadoras y
+
+8
+00:00:24,600 --> 00:00:28,700
+La ciencia, ¿cómo se encontraron con las computadoras son geniales?
+
+9
+00:00:28,700 --> 00:00:31,600
+y la ciencia está limpia pero un día
+
+10
+00:00:31,600 --> 00:00:33,500
+deben haberse unido en la calle
+
+11
+00:00:33,500 --> 00:00:36,500
+Y creé este curso en el que tengo
+
+12
+00:00:36,500 --> 00:00:39,600
+Un asiento y es difícil que los proyectos sean.
+
+13
+00:00:39,600 --> 00:00:42,300
+Difícil de completar y el esquema parece más
+
+14
+00:00:42,300 --> 00:00:44,700
+de un truco que una golosina y la

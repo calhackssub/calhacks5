@@ -10,7 +10,7 @@ target = 'es'
 
 
 
-contents = [line.rstrip('\n') for line in open("foreign.txt")]
+contents = [line.rstrip('\n') for line in open("result.txt")]
 
 contents[2] = translate_client.translate(contents[2], target_language=target)['translatedText']
 
