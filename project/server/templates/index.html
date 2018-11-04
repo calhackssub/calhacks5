@@ -11,24 +11,23 @@
 	<h1>Subtitle Generator</h1>
 </header>
 
-<body style="background-color:BlanchedAlmond">
+<body>
 
-<div>
+<div class= "container-fluid">
 	<nav role="navigation">
 
 	<form id="buttons" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
 
-		<h3> Select language of video </h3>
 
-		<select name="speechLang" id="speechLang">
+		<h3> Choose language that audio file is in. </h3>
+
+		<select name = speechLang>
 			{% for language in speechLangDict.keys() %}
 			<option value= "{{language}}" SELECTED>{{language}}</option>"
 			{% endfor %}
 		</select>
-		<br>
-		<br>
-		<br>
-		<h2> Select language to translate to </h2>
+
+		<h3> Choose language to translate to. </h3>
 		<select name = translateLang>
 			{% for language in translateLangDict.keys() %}
 			<option value= "{{language}}" SELECTED>{{language}}</option>"
@@ -39,7 +38,7 @@
 		<div id="uploadvideo" class="bar-colors-borders">
 			<input type = "file" name = "file" accept = "video/*" multiple>
 
-			<input type = "submit" value = "Upload">
+			<input type = "submit" value = "send">
 
 
 			<div class="uploadFileprompt">
