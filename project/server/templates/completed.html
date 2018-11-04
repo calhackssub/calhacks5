@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Subtitle Generator </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet"  type="text/css" href="{{ url_for('static',filename='main.css')}}">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+
+<header>
+	<h1> Subtitle Generator </h1>
+</header>
+
+<body>
+	<h2>File uploaded!</h2>
+
+	<a href="{{finalPath}}" download="{{finalName}}">Download</a>
+
+</body>
+</html>
