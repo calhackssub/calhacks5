@@ -40,8 +40,6 @@ def transcribeAudio(name, language):
     # Detects speech in the audio file
     response = client.recognize(config, audio)
 
-    for result in response.results:
-        alternative = result.alternatives[0]
   
     tF = open(os.path.join(
         os.path.dirname(__file__),
@@ -54,22 +52,23 @@ def transcribeAudio(name, language):
         "end": None
     }
 
-    for word_info in alternative.words:
-        word = word_info.word
-        start_time = word_info.start_time
-        end_time = word_info.end_time
-        words.append(word)
-
-        if ((len(words) - 1) % 8) == 0:
-            bookend["start"] = "00:" + "00:" + str(start_time.seconds) + "," + str(int(start_time.nanos * 1e-8)) + "00"
-        elif (len(words) % 8) == 0:
-            bookend["end"] = "00:" + "00:" + str(end_time.seconds) + "," + str(int(end_time.nanos * 1e-8)) + "00"
-            if i > 1:
+    for result in response.results:
+        alternative = result.alternatives[0]
+        for word_info in alternative.words:
+            word = word_info.word
+            start_time = word_info.start_time
+            end_time = word_info.end_time
+            words.append(word)
+            if ((len(words) - 1) % 8) == 0:
+                bookend["start"] = "00:" + "00:" + str(start_time.seconds) + "," + str(int(start_time.nanos * 1e-8)) + "00"
+            elif (len(words) % 8) == 0:
+                bookend["end"] = "00:" + "00:" + str(end_time.seconds) + "," + str(int(end_time.nanos * 1e-8)) + "00"
+                if (i > 1):
+                    tF.write("\n")
+                tF.write(str(i) + "\n")
+                tF.write(bookend["start"] + " --> " + bookend["end"] + "\n")
+                for item in words:
+                    tF.write(item + " ")
                 tF.write("\n")
-            tF.write(str(i) + "\n")
-            tF.write(bookend["start"] + " --> " + bookend["end"] + "\n")
-            for item in words:
-                tF.write(item + " ")
-            tF.write("\n")
-            words = []
-            i += 1
+                words = []
+                i += 1
