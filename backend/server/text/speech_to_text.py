@@ -1,7 +1,7 @@
 import io, os
 
 #set to your path to the key
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Users/blues/repo2/backend/key.JSON"
+#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Users/blues/repo2/backend/key.JSON"
 
 # Imports the Google Cloud client library
 from google.cloud import speech

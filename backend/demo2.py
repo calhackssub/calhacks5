@@ -1,5 +1,7 @@
 import os
+
 # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Users/blues/repo2/backend/key.JSON"
+
 
 # Imports the Google Cloud client library
 from google.cloud import translate
