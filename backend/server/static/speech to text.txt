@@ -1,0 +1,38 @@
+Language 	languageCode 	Language (English name)
+
+Deutsch (Deutschland) 	de-DE 	German (Germany)
+
+English (United States) 	en-US 	English (United States)
+
+Español (España) 	es-ES 	Spanish (Spain)
+
+Español (México) 	es-MX 	Spanish (Mexico)
+
+Filipino (Pilipinas) 	fil-PH 	Filipino (Philippines)
+Français (France) 	fr-FR 	French (France)
+
+Italiano (Italia) 	it-IT 	Italian (Italy)
+
+
+Português (Brasil) 	pt-BR 	Portuguese (Brazil)
+Português (Portugal) 	pt-PT 	Portuguese (Portugal)
+
+
+
+Swahili (Kenya) 	sw-KE 	Swahili (Kenya)
+Suomi (Suomi) 	fi-FI 	Finnish (Finland)
+Svenska (Sverige) 	sv-SE 	Swedish (Sweden)
+Türkçe (Türkiye) 	tr-TR 	Turkish (Turkey)
+
+
+日本語（日本）     ja-JP   Japanese (Japan)
+
+Tiếng Việt (Việt Nam)   vi-VN   Vietnamese (Vietnam)
+
+普通话 (中国大陆)  cmn-Hans-CN     Chinese, Mandarin (Simplified, China)
+
+한국어 (대한민국) ko-KR   Korean (South Korea)
+
+हिन्दी (भारत)   hi-IN   Hindi (India)
+
+தமிழ் (இந்தியா)     ta-IN   Tamil (India)

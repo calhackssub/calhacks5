@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Subtitle Generator </title>
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<header>
+	<h1> Subtitle Generator </h1>
+</header>
+
+<body>
+	<h2> Upload Here </h2>
+
+	<form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+	<input type = "file" name = "file" accept = "audio/*" multiple>
+	<input type = "submit" value = "send">
+	</form>
+
+</body>
+</html>
