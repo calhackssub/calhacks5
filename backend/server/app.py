@@ -1,13 +1,16 @@
 import os
 from flask import Flask, render_template, request
-from server.text.speech_to_text import transcribeAudio
+from speech_to_text import transcribeAudio
+from translate_text import translateText
 
 app = Flask(__name__)
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-speechLangDict = {'1': "one", '2': "two", '3': "three"}
-translateLangDict = {'4': "four", '5': "five", '6': "six"}
+speechLangDict = {'English': "en-US", 'Spanish': "es-ES", 'French': "fr-FR",
+    'Korean': "ko-KR", 'Chinese': "cmn-Hant-TW", 'German': "de-De", 'Hindi': "hi-IN", 'Italian': "it-IT"}
+translateLangDict = {'English': "en", 'Spanish': "es", 'French': "fr",
+    'Korean': "ko", 'Chinese': "zh", 'German': "de", 'Hindi': "hi", 'Italian': "it"}
 
 @app.route('/')
 def index():
@@ -16,25 +19,23 @@ def index():
 @app.route('/upload', methods = ['GET', 'POST'])
 
 def upload():
-    target = os.path.join(APP_ROOT, 'audio/')
-    print(target)
-
-    if not os.path.isdir(target):
-        os.mkdir(target)
-
-    filename = 1
     for file in request.files.getlist("file"):
         filename = file.filename
         print(filename)
-        destination = "/".join([target, filename])
-        file.save(destination)
+        APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+        print(APP_ROOT)
+        # destination = "/".join(filename)
+        file.save(os.path.join(APP_ROOT, filename))
 
-    speechLangCode = speechLangDict.get(request.form.get('speechLang'))
-    translateLangCode = translateLangDict.get(request.form.get('translateLang'))
-    print(speechLangCode)
-    print(translateLangCode)
+    name = filename.split(".")[0]
 
-    transcribeAudio(filename)
+    speechCode = speechLangDict.get(request.form.get('speechLang'))
+    translateCode = translateLangDict.get(request.form.get('translateLang'))
+    # print(speechCode)
+    # print(translateCode)
+
+    transcribeAudio(name, speechCode)
+    translateText(name, translateCode)
 
     return render_template("completed.html")
 

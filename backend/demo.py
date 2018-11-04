@@ -2,11 +2,9 @@ import io
 import os
 import subprocess
 
-<<<<<<< HEAD
+
 # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Users/blues/repo2/backend/key.JSON"
-=======
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Users/blues/repo3/backend/key.JSON"
->>>>>>> 39432ddc7266993f70855d38ef2255aebda706c2
+
 
 # Imports the Google Cloud client library
 from google.cloud import speech
