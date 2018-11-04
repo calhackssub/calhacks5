@@ -18,7 +18,7 @@ def transcribeAudio(audio_name):
         '..', 'audio',
         audio_name)
     # Instantiates a client
-    text_file = open(os.path.join(
+    f = open(os.path.join(
         os.path.dirname(__file__),
         'transcribed_audio.txt'), 'a')
 
@@ -65,18 +65,19 @@ def transcribeAudio(audio_name):
         start_time = word_info.start_time
         end_time = word_info.end_time
         words.append(word)
-        #print(words)
+
         if ((len(words) - 1) % 8) == 0:
             bookend["start"] = "00:" + "00:" + str(start_time.seconds) + "," + str(int(start_time.nanos * 1e-8)) + "00"
         elif (len(words) % 8) == 0:
             bookend["end"] = "00:" + "00:" + str(end_time.seconds) + "," + str(int(end_time.nanos * 1e-8)) + "00"
-            text_file.write(""+ '\n' + '\n')
-            text_file.write(str(i) + '\n')
-            text_file.write(bookend["start"] + " --> " + bookend["end"])
+            if i > 1:
+                f.write("\n")
+            f.write(str(i) + '\n')
+            f.write(bookend["start"] + " --> " + bookend["end"])
             for item in words:
-                text_file.write(item +' ')
+                f.write(item + " ")
             words = []
             i += 1
 
-    text_file.close()
+    f.close()
 
