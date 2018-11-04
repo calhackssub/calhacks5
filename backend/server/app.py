@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 from speech_to_text import transcribeAudio
 from translate_text import translateText
 from encode_subtitles import subtitleVideo
@@ -17,8 +17,8 @@ translateLangDict = {'English': "en", 'Spanish': "es", 'French': "fr",
 def index():
     return render_template("index.html", speechLangDict = speechLangDict, translateLangDict = translateLangDict)
 
-@app.route('/upload', methods = ['GET', 'POST'])
 
+@app.route('/download', methods = ['GET', 'POST'])
 def upload():
     for file in request.files.getlist("file"):
         filename = file.filename
@@ -43,8 +43,18 @@ def upload():
     os.remove(name + ".mp4")
     os.remove(name + ".srt")
 
-    finalName = name + "-subbed.srt" 
-    return render_template("completed.html")
+    finalPath = "download/" + name + "-subbed.mp4"
+    finalName = name + "-subbed.mp4"
+    return render_template("completed.html", finalName = finalName, finalPath = finalPath)
+
+
+@app.route('/download/<name>')
+def download(name = None):
+    print(name)
+    if name is None:
+        return
+    return send_file(name, as_attachment=True)
+
 
 
 if __name__  == "__main__":
