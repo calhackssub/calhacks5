@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template, request
 from speech_to_text import transcribeAudio
 from translate_text import translateText
+from encode_subtitles import subtitleVideo
 
 app = Flask(__name__)
 
@@ -35,8 +36,14 @@ def upload():
     # print(translateCode)
 
     transcribeAudio(name, speechCode)
+    os.remove(name + ".wav")
     translateText(name, translateCode)
+    os.remove(name + ".txt")
+    subtitleVideo(name)
+    os.remove(name + ".mp4")
+    os.remove(name + ".srt")
 
+    finalName = name + "-subbed.srt" 
     return render_template("completed.html")
 
 
