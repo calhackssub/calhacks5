@@ -1,0 +1,55 @@
+1
+00:00:0,600 --> 00:00:4,200
+happy Halloween I have a little kid at 
+
+2
+00:00:4,200 --> 00:00:7,000
+home so Halloween's a big deal but I've 
+
+3
+00:00:7,000 --> 00:00:9,500
+also been reading a lot of dr. Seuss 
+
+4
+00:00:9,500 --> 00:00:12,800
+like a lot of dr. Seuss and this 
+
+5
+00:00:12,800 --> 00:00:15,700
+morning I discovered that dr. Seuss actually wrote 
+
+6
+00:00:15,700 --> 00:00:20,100
+a poem about cs61a messing relevant so I 
+
+7
+00:00:20,100 --> 00:00:24,600
+thought I'd share it with you computers and 
+
+8
+00:00:24,600 --> 00:00:28,700
+science how did they meet computers are cool 
+
+9
+00:00:28,700 --> 00:00:31,600
+and science is neat but then one day 
+
+10
+00:00:31,600 --> 00:00:33,500
+they must have teamed up on the street 
+
+11
+00:00:33,500 --> 00:00:36,500
+and created this course in which I have 
+
+12
+00:00:36,500 --> 00:00:39,600
+a seat and it's hard the projects are 
+
+13
+00:00:39,600 --> 00:00:42,300
+tough to complete and scheme seems like more 
+
+14
+00:00:42,300 --> 00:00:44,700
+of a trick than a treat and the 

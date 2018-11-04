@@ -63,6 +63,7 @@ for result in response.results:
     #         word,
     #         start_time.seconds + start_time.nanos * 1e-9,
     #         end_time.seconds + end_time.nanos * 1e-9))
+
     for word_info in alternative.words:
         word = word_info.word
         start_time = word_info.start_time

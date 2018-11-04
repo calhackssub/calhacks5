@@ -14,6 +14,7 @@ def index():
     return render_template("index.html", speechLangDict = speechLangDict, translateLangDict = translateLangDict)
 
 @app.route('/upload', methods = ['GET', 'POST'])
+
 def upload():
     target = os.path.join(APP_ROOT, 'audio/')
     print(target)
